@@ -26,5 +26,8 @@ class Settings:
     # Streaming Settings
     STREAM_CHUNK_SIZE = 1024
     STREAM_TIMEOUT = 30  # seconds
+    
+    # Feature Flags
+    ENABLE_VALIDATION = os.getenv("ENABLE_VALIDATION", "true").lower() == "true"
 
 settings = Settings()

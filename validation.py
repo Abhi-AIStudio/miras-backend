@@ -56,12 +56,31 @@ class GeminiValidator:
         
         For example, if response says "AUM is $3.8bn in May 2021", that's one fact to check.
         
+        IMPORTANT FORMATTING RULES:
+        - Never use asterisks or bold formatting (no ** or *)
+        - Start each fact with a capital letter
+        - Keep facts concise but complete
+        
+        Example of correct formatting:
+        {{
+            "facts_checked": [
+                {{
+                    "fact": "The performance fee crystallizes over a rolling 3-year period",
+                    "verified": true
+                }},
+                {{
+                    "fact": "Management fee declines to 1% for investments exceeding $200mm",
+                    "verified": false
+                }}
+            ]
+        }}
+        
         Return JSON with this structure:
         {{
             "query_answered": true/false,
             "facts_checked": [
                 {{
-                    "fact": "The exact factual claim from the response",
+                    "fact": "The exact factual claim from the response (start with capital letter)",
                     "verified": true/false,
                     "page_found": "page number if found, or null"
                 }}
@@ -166,12 +185,31 @@ class GeminiValidator:
         
         For example, if response says "AUM is $3.8bn in May 2021", that's one fact to check.
         
+        IMPORTANT FORMATTING RULES:
+        - Never use asterisks or bold formatting (no ** or *)
+        - Start each fact with a capital letter
+        - Keep facts concise but complete
+        
+        Example of correct formatting:
+        {{
+            "facts_checked": [
+                {{
+                    "fact": "The performance fee crystallizes over a rolling 3-year period",
+                    "verified": true
+                }},
+                {{
+                    "fact": "Management fee declines to 1% for investments exceeding $200mm",
+                    "verified": false
+                }}
+            ]
+        }}
+        
         Return JSON with this structure:
         {{
             "query_answered": true/false,
             "facts_checked": [
                 {{
-                    "fact": "The exact factual claim from the response",
+                    "fact": "The exact factual claim from the response (start with capital letter)",
                     "verified": true/false,
                     "page_found": "page number if found, or null"
                 }}
