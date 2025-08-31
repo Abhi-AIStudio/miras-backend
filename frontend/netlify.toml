@@ -4,7 +4,7 @@
   publish = "build"
 
 [build.environment]
-  REACT_APP_API_URL = "https://milo-backend.onrender.com"
+  REACT_APP_API_URL = "https://miras-backend-production.up.railway.app"
 
 [[redirects]]
   from = "/*"
